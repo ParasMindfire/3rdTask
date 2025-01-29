@@ -6,12 +6,14 @@ import HistoryComponent from './components/HistoryComponent.tsx'
 import { UserProvider } from './context/userContext.tsx'
 import { ValidationProvider } from './context/validationContext.tsx'
 import { ToastProvider } from './context/toastContext.tsx'
+import { WeatherProvider } from './context/weatherContext.tsx'
 
 const App:React.FC=()=> {
   return (
     <ToastProvider>
       <UserProvider>
         <ValidationProvider>
+          <WeatherProvider>
             <div>
               <ModalComponent/>
               <HistoryComponent/>
@@ -25,6 +27,7 @@ const App:React.FC=()=> {
                 </div>
               </div>
             </div>
+          </WeatherProvider>
         </ValidationProvider>
       </UserProvider>
     </ToastProvider>
